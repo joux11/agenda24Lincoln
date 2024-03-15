@@ -1,20 +1,51 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Agenda
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div>
+    <ion-item>
+      <ion-label class="title">Bienvenidos</ion-label>
+    </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item>
+      <img class="img" src="assets/imagenes/calendario.png" />
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="subtitle">Agenda Electronica</ion-label>
+    </ion-item>
+
+    <ion-card color="primary">
+      <ion-card-title style="text-align: center; font-style: bold;">
+        Inicio de Sesion
+      </ion-card-title>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="txtUser"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Clave</ion-label>
+          <ion-input type="text" [(ngModel)]="txtPassword"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-button color="success" expand="block" (click)="login()">Ingresar</ion-button>
+
+        </ion-item>
+        <ion-item>
+          <ion-label style="text-align: center;">
+            <ion-button fill="clear" (click)="abrirModal()">
+              Cambiar contraseña
+            </ion-button>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
   </div>
+
 </ion-content>
